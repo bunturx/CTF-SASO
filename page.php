@@ -9,11 +9,9 @@
 </body></html>
 
 <?php
-	function agente(){
-		return(eregi("opera", $_SERVER['HTTP_USER_AGENT']));
+$useragent = $_SERVER['HTTP_USER_AGENT'];
+if (preg_match("/Opera/i", $useragent))
+	{
+	    echo "FLAG_SASO:292_Perfecto_89";
 	}
-
-	if(agente()){
-  		echo 'FLAG_SASO:"292_Perfecto_89"';
-	}	
 ?>
